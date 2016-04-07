@@ -22,7 +22,7 @@ module.exports = app => {
   });
 
   app.route("/tasks/:id")
-    .all((req, res) => {
+    .all((req, res, next) => {
       delete req.body.id;
       next();
     })
@@ -40,7 +40,11 @@ module.exports = app => {
         });
     })
     .put((req, res) => {
-      // "/tasks/1": Update a task
+      Task.update(req.body, {where: req.params})
+        .then(result => res.sendStatus(204))
+        .catch(error => {
+          res.status(412).json({msg: error.message});
+        });
     })
     .delete((req, res) => {
       // "/tasks/1": Delete a task
