@@ -25,4 +25,6 @@ consign()
 // });
 
 // app.listen(PORT, () => console.log(`NTask API - Port ${PORT}`));
-// module.exports = app;
+module.exports = app;
+// Se exporta el módulo princiapl del API (es decir, index.js), para
+// así permitir que se inicie el API durante los tests
