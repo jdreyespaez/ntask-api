@@ -1,0 +1,1 @@
+define({  "name": "Node Task API - Documentation",  "template": {    "forceLanguage": "en"  },  "version": "1.0.0",  "description": "Task list API",  "sampleUrl": false,  "apidoc": "0.2.0",  "generator": {    "name": "apidoc",    "time": "2016-04-09T11:14:15.627Z",    "url": "http://apidocjs.com",    "version": "0.15.1"  }});
