@@ -4,9 +4,10 @@
   "description": "Task list API",
   "main": "index.js",
   "scripts": {
-    "start": "npm run apidoc && babel-node index.js",
-    "apidoc": "apidoc -i routes/ -o public/apidoc",
-    "test": "NODE_ENV=test mocha test/**/*.js"
+    "start": "npm run apidoc && npm run clusters",
+    "clusters": "babel-node clusters.js",
+    "test": "NODE_ENV=test mocha test/**/*.js",
+    "apidoc": "apidoc -i routes/ -o public/apidoc"
   },
   "apidoc": {
     "name": "Node Task API - Documentation",
@@ -25,11 +26,13 @@
     "cors": "^2.7.1",
     "express": "^4.13.4",
     "jwt-simple": "^0.4.1",
+    "morgan": "^1.6.1",
     "mysql": "^2.10.2",
     "passport": "^0.3.2",
     "passport-jwt": "^2.0.0",
     "sequelize": "^3.19.2",
-    "sqlite3": "^3.1.1"
+    "sqlite3": "^3.1.1",
+    "winston": "^2.1.1"
   },
   "devDependencies": {
     "apidoc": "^0.15.1",
